@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{109E520A-DB19-47F2-AE94-14AC084567D2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VisionBlockApplication</RootNamespace>
+    <AssemblyName>VisionBlockApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicoVB.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.0.0.14576, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.1\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.0.1205, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.5.0.1205\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ookii.Dialogs.Wpf, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ookii.Dialogs.Wpf.1.0.0\lib\net45\Ookii.Dialogs.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.StackTrace, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.StackTrace.4.3.0\lib\net46\System.Diagnostics.StackTrace.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Converters\ProcessingButtonCategoryToBrushConverter.cs" />
+    <Compile Include="Converters\ProcessingEnumCategoryToTextConverter.cs" />
+    <Compile Include="Core\VisualTree.cs" />
+    <Compile Include="Divers\GifImage.cs" />
+    <Compile Include="Divers\ImageWPFManager.cs" />
+    <Compile Include="Divers\RapportManager.cs" />
+    <Compile Include="Divers\WorkFlowManager.cs" />
+    <Compile Include="ImageProcessingWrapper\ImageProcessingLibrary.cs" />
+    <Compile Include="ViewModels\Controls\Analysis\ViewModel_Analysis_BIN.cs" />
+    <Compile Include="ViewModels\Controls\Analysis\ViewModel_Analysis_NDG.cs" />
+    <Compile Include="ViewModels\Controls\Analysis\ViewModel_Analysis_RGB.cs" />
+    <Compile Include="ViewModels\Controls\Blocks\ViewModelBlock_LuminositeRgb.cs" />
+    <Compile Include="ViewModels\Controls\Blocks\ViewModelBlock_LuminositeNdg.cs" />
+    <Compile Include="ViewModels\Controls\Blocks\ViewModelBlock_ContrasteNdg.cs" />
+    <Compile Include="ViewModels\Controls\Blocks\ViewModelBlock_Lut.cs" />
+    <Compile Include="ViewModels\Controls\Blocks\ViewModelBlock_Inversion.cs" />
+    <Compile Include="ViewModels\Controls\Blocks\ViewModelBlock_Addition.cs" />
+    <Compile Include="ViewModels\Controls\Blocks\ViewModelBlock_Filtrage.cs" />
+    <Compile Include="ViewModels\Controls\Blocks\ViewModelBlock_Masque.cs" />
+    <Compile Include="ViewModels\Controls\Blocks\ViewModelBlock_RgbFromPlans.cs" />
+    <Compile Include="ViewModels\Controls\Blocks\ViewModelBlock_MoyennePonderee.cs" />
+    <Compile Include="ViewModels\Controls\Blocks\ViewModelBlock_OperationBinaire.cs" />
+    <Compile Include="ViewModels\Controls\Blocks\ViewModelBlock_Morphologie.cs" />
+    <Compile Include="ViewModels\Controls\Blocks\ViewModelBlock_Seuillage.cs" />
+    <Compile Include="ViewModels\Controls\Blocks\ViewModelBlock_Transparent.cs" />
+    <Compile Include="ViewModels\Controls\ViewModel_EmptyAnalysis.cs" />
+    <Compile Include="ViewModels\Controls\ViewModel_ImageSelector.cs" />
+    <Compile Include="ViewModels\Misc\ViewModel_ImageFile.cs" />
+    <Compile Include="ViewModels\Misc\ViewModel_Line.cs" />
+    <Compile Include="ViewModels\Controls\Blocks\ViewModelBlock_OuvertureImage.cs" />
+    <Compile Include="ViewModels\Controls\Blocks\ViewModelBlock_SelectionPlan.cs" />
+    <Compile Include="ViewModels\Controls\Blocks\ViewModelBlock_ContrasteRgb.cs" />
+    <Compile Include="ViewModels\Controls\ViewModel_EmptyBlock.cs" />
+    <Compile Include="ViewModels\Misc\ViewModel_NavigationButton.cs" />
+    <Compile Include="ViewModels\ViewModel_Base.cs" />
+    <Compile Include="Views\Controls\Analysis\Analysis_BIN.xaml.cs">
+      <DependentUpon>Analysis_BIN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Analysis\Analysis_RGB.xaml.cs">
+      <DependentUpon>Analysis_RGB.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Analysis\Analysis_NDG.xaml.cs">
+      <DependentUpon>Analysis_NDG.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\BasicColumn.xaml.cs">
+      <DependentUpon>BasicColumn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\BasicLineExample.xaml.cs">
+      <DependentUpon>BasicLineExample.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Blocks\Block_LuminositeRgb.xaml.cs">
+      <DependentUpon>Block_LuminositeRgb.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Blocks\Block_LuminositeNdg.xaml.cs">
+      <DependentUpon>Block_LuminositeNdg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Blocks\Block_ContrasteNdg.xaml.cs">
+      <DependentUpon>Block_ContrasteNdg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Blocks\Block_Lut.xaml.cs">
+      <DependentUpon>Block_Lut.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Blocks\Block_Addition.xaml.cs">
+      <DependentUpon>Block_Addition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Blocks\Block_Inversion.xaml.cs">
+      <DependentUpon>Block_Inversion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Blocks\Block_Masque.xaml.cs">
+      <DependentUpon>Block_Masque.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Blocks\Block_RgbFromPlans.xaml.cs">
+      <DependentUpon>Block_RgbFromPlans.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Blocks\Block_OperationBinaire.xaml.cs">
+      <DependentUpon>Block_OperationBinaire.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Blocks\Block_Morpholorgie.xaml.cs">
+      <DependentUpon>Block_Morpholorgie.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Blocks\Block_SelectionPlan.xaml.cs">
+      <DependentUpon>Block_SelectionPlan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Blocks\Block_OuvertureImage.xaml.cs">
+      <DependentUpon>Block_OuvertureImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Blocks\Block_Filtrage.xaml.cs">
+      <DependentUpon>Block_Filtrage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Blocks\Block_MoyennePonderee.xaml.cs">
+      <DependentUpon>Block_MoyennePonderee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Blocks\Block_ContrasteRgb.xaml.cs">
+      <DependentUpon>Block_ContrasteRgb.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\Blocks\Block_Seuillage.xaml.cs">
+      <DependentUpon>Block_Seuillage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\RelayCommand.cs" />
+    <Compile Include="ViewModels\Pages\ViewModel_MainWindow.cs" />
+    <Page Include="Views\Controls\Analysis\Analysis_BIN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\Analysis\Analysis_RGB.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\Analysis\Analysis_NDG.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\BasicColumn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\BasicLineExample.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\Blocks\Block_LuminositeRgb.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\Blocks\Block_LuminositeNdg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\Blocks\Block_ContrasteNdg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\Blocks\Block_Lut.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\Blocks\Block_Addition.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\Blocks\Block_Inversion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\Blocks\Block_Masque.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\Blocks\Block_RgbFromPlans.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\Blocks\Block_OperationBinaire.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\Blocks\Block_Morpholorgie.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\Blocks\Block_SelectionPlan.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\Blocks\Block_OuvertureImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\Blocks\Block_Filtrage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\Blocks\Block_MoyennePonderee.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\Blocks\Block_ContrasteRgb.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Controls\Blocks\Block_Seuillage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\Blocks\Block_Transparent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\EmptyBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Controls\ImageSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\Controls\Blocks\Block_Transparent.xaml.cs">
+      <DependentUpon>Block_Transparent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\EmptyBlock.xaml.cs">
+      <DependentUpon>EmptyBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Controls\ImageSelector.xaml.cs">
+      <DependentUpon>ImageSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\ImgTest\test.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Buttons\BlockClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Buttons\BlockOpenPicture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\ImgTest\cervin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Buttons\BlockFolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="splashscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Icons\favicoVB.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="favicoVB.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets'))" />
+  </Target>
+</Project>
